@@ -11,7 +11,8 @@ getHtml =  async()=>{
     return html;
 };
 
-setTimeout(()=>{
+// setTimeout(()=>{
+
     getHtml().then((res )=> {
         const $ = cheerio.load(res);
         $('.lister-list>tr').each((i,movie)=>{
@@ -24,4 +25,4 @@ setTimeout(()=>{
             console.log('Se a cargado con exito!');
         })
     })
-},10);
+// },10);
